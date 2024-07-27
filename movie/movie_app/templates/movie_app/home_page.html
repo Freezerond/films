@@ -1,0 +1,11 @@
+{%extends 'movie_app/base.html' %}
+
+{% block title %}Фильмы загруженные на сайт{%endblock%}
+
+{%block content%}
+    {%for movie in movies %}
+        <div>
+            <p>{{movie.title}} - {{movie.category}}</p>
+        </div>
+    {%endfor%}
+{%endblock%}

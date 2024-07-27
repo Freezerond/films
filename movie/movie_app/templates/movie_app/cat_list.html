@@ -1,0 +1,12 @@
+{%extends 'movie_app/base.html' %}
+
+{% block title %}Категории{%endblock%}
+
+{%block content%}
+    {%for category in categories %}
+        <div>
+            <a href="{% url 'movies_list'  cat_slug=category.slug%}">{{category.title}}</a>
+            <p> {{category.description}}</p>
+        </div>
+    {%endfor%}
+{%endblock%}
